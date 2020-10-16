@@ -8,12 +8,7 @@ import './App.css';
 function App() {
  return (
   <div className="App">
-    <header className="App-header">
-      <NavBar />
-      <Img />
-      <Title text="Edit src/App.js and save to" />
-      <ReactLink />
-    </header>
+    <NavBar />
   </div>
 )
 };
