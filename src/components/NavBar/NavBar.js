@@ -10,7 +10,7 @@ class NavBar extends React.Component{
             <a href="#diseños">diseños</a>
             <a href="#método">método</a>
             <a href="#contacto">contacto</a>
-            <a href="#cart"><CartWidget /></a>
+            <a className="cartIcon" href="#cart"><CartWidget /></a>
         </div>
       )
     }
