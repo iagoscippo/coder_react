@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css'
-import CartWidget from '../CartWidget/CartWidget'
+import CartWidgetIcon from '../CartWidget/Icon'
 
 class NavBar extends React.Component{
     render(){
@@ -10,7 +10,7 @@ class NavBar extends React.Component{
             <a href="#diseños">diseños</a>
             <a href="#método">método</a>
             <a href="#contacto">contacto</a>
-            <a className="cartIcon" href="#cart"><CartWidget /></a>
+            <a href="#cart"><CartWidgetIcon /></a>
         </div>
       )
     }

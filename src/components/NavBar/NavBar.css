@@ -24,11 +24,6 @@
     color: white
 }
 
-.navbar a.cartIcon {
-    float: right;
-    padding: 0px 10px;
-}
-
 @media screen and (max-width: 500px) {
     .navbar a {
       float: none;
