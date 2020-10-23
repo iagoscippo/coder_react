@@ -33,7 +33,7 @@ export default function ItemCount(props) {
         <div className="itemCounter" style={styles}>
             <div className="upper" style={upper}>
                 <ItemCountButton add={false} onClick = {props.handleClick} counter = {props.counter}/>
-                <ItemCountDisplay/>
+                <ItemCountDisplay counter = {props.counter} exceeded = {props.exceed}/>
                 <ItemCountButton add={true} onClick = {props.handleClick} counter = {props.counter}/> 
             </div>
             <div className="lower" style={lower}>
