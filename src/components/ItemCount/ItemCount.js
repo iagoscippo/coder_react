@@ -4,12 +4,12 @@ import ItemCountButton from './Button/Button';
 import ItemCountDisplay from './Display/Display';
 
 const styles = {
-    width:350,
-    height:160,
+    width:300,
+    height:150,
     backgroundColor:'black',
     display: 'flex',
     flexDirection:'column',
-    borderRadius: '20px',
+    borderRadius: '10px',
     margin: '50px auto'
 }
 

@@ -10,7 +10,7 @@ let display = {
     alignItems:"center",
     fontWeight:"700",
     fontSize:"2rem",
-    borderRadius:10,
+    borderRadius:50,
 }
 
 export default function ItemCountDisplay(props){

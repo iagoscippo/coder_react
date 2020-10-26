@@ -5,14 +5,15 @@ let button = {
     height: 50,
     margin: 0,
     textAlign: "center",
-    border: "2px solid pink",
+    border: "3px solid pink",
     padding: "auto",
+    color: 'pink',
     cursor: "pointer",
-    backgroundColor: "grey",
+    backgroundColor: "black",
     display: 'flex',
     justifyContent: 'center',
     alignItems:"center",
-    borderRadius:20,
+    borderRadius:100,
     fontSize:"2rem"
 }
 

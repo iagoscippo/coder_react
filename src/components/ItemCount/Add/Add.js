@@ -5,17 +5,18 @@ const add = {
     alignText:"center",
     cursor:"pointer",
     backgroundColor:"pink",
-    padding:20,
-    border:"2px solid grey",
+    padding:15,
+    justifyContent: 'center',
+    border:"2px solid black",
     color: "black",
-    fontSize: 20,
-    height:10,
-    borderRadius:10,
+    fontSize: 15,
+    fontWeight: 500,
+    borderRadius:25,
 
 }
 
 export default function ItemCountAdd(props){
     return (
-        <div className="agregar" style={add} onClick={props.handleAdd}>agregar</div>
+        <div className="agregar" style={add} onClick={props.onAdd}>agregar</div>
     )
 };

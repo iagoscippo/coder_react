@@ -5,11 +5,11 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
 
-// parametros iniciales
+
 let available = 15;
 let initial = 1;
 
-// estados
+
 let [counter, setCounter] = useState(initial);
 let [stock, setStock] = useState(available);
 let [cart, setCart] = useState(0);
@@ -19,8 +19,6 @@ let [exceed,setExceed] = useState(false);
 useEffect(() => {
   console.log("Initialized");
 }, []); */
-
-// handlers o callbacks
 
 const handleClick = (amount)=>{
   return ()=>{
@@ -42,7 +40,6 @@ const handleClick = (amount)=>{
   }
  }
 
-// Rendering
 
  const info = {
   width: '100%',
@@ -57,8 +54,6 @@ let itemCountProps = {stock, initial, handleAdd, handleClick, counter, exceed};
     <NavBar />
       <div className="info" style={info}>
         <ItemCount {...itemCountProps}/>
-        <h3>stock: {stock}</h3>
-        <h3>inicial: {initial}</h3>
         <h3>carrito: {cart}</h3>
         <ItemListContainer title="FURIA PRINT"/>
     </div>
