@@ -15,6 +15,11 @@ let [stock, setStock] = useState(available);
 let [cart, setCart] = useState(0);
 let [exceed,setExceed] = useState(false);
 
+/*
+useEffect(() => {
+  console.log("Initialized");
+}, []); */
+
 // handlers o callbacks
 
 const handleClick = (amount)=>{
