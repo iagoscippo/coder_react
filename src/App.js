@@ -36,7 +36,7 @@ const handleClick = (amount)=>{
     setStock(resto);
     setCounter( (initial > resto) ? resto : initial); //opcional 
   } else {
-    alert('no hay más items');
+    alert('no queda stock :(');
   }
  }
 
