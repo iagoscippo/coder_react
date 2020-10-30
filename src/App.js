@@ -13,7 +13,6 @@ let initial = 1;
 let [counter, setCounter] = useState(initial);
 let [stock, setStock] = useState(available);
 let [cart, setCart] = useState(0);
-// let [exceed,setExceed] = useState(false);
 
 /*
 useEffect(() => {
@@ -30,17 +29,6 @@ useEffect(() => {
     alert('no queda stock :(');
   }
  }
-
- /* const handleClick = (amount) =>{
-  return ()=>{
-    let total = (amount < 0) ? 0 : amount;
-    let limit = (stock < total) ? stock : total;
-    setCounter(limit);
-    setExceed(((stock - 1)< total) || (total === 0) ); //opcional
-  }
- }
- */
-
 
  const info = {
   width: '100%',
