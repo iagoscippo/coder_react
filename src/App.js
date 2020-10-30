@@ -13,21 +13,12 @@ let initial = 1;
 let [counter, setCounter] = useState(initial);
 let [stock, setStock] = useState(available);
 let [cart, setCart] = useState(0);
-let [exceed,setExceed] = useState(false);
+// let [exceed,setExceed] = useState(false);
 
 /*
 useEffect(() => {
   console.log("Initialized");
 }, []); */
-
-const handleClick = (amount)=>{
-  return ()=>{
-    let total = (amount < 0) ? 0 : amount;
-    let limit = (stock < total) ? stock : total;
-    setCounter(limit);
-    setExceed(((stock - 1)< total) || (total === 0) ); //opcional
-  }
- }
 
  const  handleAdd = ()=>{
   if (stock > 0) {
@@ -40,6 +31,16 @@ const handleClick = (amount)=>{
   }
  }
 
+ /* const handleClick = (amount) =>{
+  return ()=>{
+    let total = (amount < 0) ? 0 : amount;
+    let limit = (stock < total) ? stock : total;
+    setCounter(limit);
+    setExceed(((stock - 1)< total) || (total === 0) ); //opcional
+  }
+ }
+ */
+
 
  const info = {
   width: '100%',
@@ -47,7 +48,7 @@ const handleClick = (amount)=>{
   textAlign: 'center'
  }
 
-let itemCountProps = {stock, initial, handleAdd, handleClick, counter, exceed};
+let itemCountProps = {stock, initial, handleAdd, counter};
 
  return (
   <div className="App">
