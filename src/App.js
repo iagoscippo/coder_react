@@ -38,7 +38,7 @@ function App() {
     <div className="App">
       <NavBar />
         <div className="info" style={info}>
-          <ItemListContainer title="FURIA PRINT" itemId={1}/>
+          <ItemListContainer title="FURIA PRINT" itemId={2}/>
           <ItemCount {...itemCountProps}/>
           <h3>carrito: {cart}</h3>      
       </div>

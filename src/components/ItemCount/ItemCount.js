@@ -4,8 +4,8 @@ import ItemCountButton from './Button/Button';
 import ItemCountDisplay from './Display/Display';
 
 const styles = {
-    width:300,
-    height:150,
+    width:175,
+    height:100,
     backgroundColor:'black',
     display: 'flex',
     flexDirection:'column',

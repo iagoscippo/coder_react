@@ -1,8 +1,8 @@
 import React from 'react';
 
 let button = {
-    width: 50,
-    height: 50,
+    width: 25,
+    height: 25,
     margin: 0,
     textAlign: "center",
     border: "3px solid pink",

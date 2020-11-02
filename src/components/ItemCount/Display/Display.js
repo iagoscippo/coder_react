@@ -1,15 +1,15 @@
 import React from 'react';
 
 let display = {
-    height:50,
-    width:100,
+    height:25,
+    width:50,
     backgroundColor:"white",
     border:"2px solid pink",
     display:"flex",
     justifyContent:"center",
     alignItems:"center",
     fontWeight:"700",
-    fontSize:"2rem",
+    fontSize:15,
     borderRadius:50,
 }
 

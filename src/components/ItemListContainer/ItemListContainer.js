@@ -6,13 +6,10 @@ function getItems(id) {
     return new Promise((res, rej) => {
         setTimeout (() => {
             res(
-                [{ id: 1, name: "item1" }, { id: 2, name: "item2" }, { id: 3, name: "item3" }]
-                .filter(
-                    item => item.id === id
-                    )
+                [{ id: 1, name: "remera 1" }, { id: 2, name: "remera 2" }, { id: 3, name: "remera 3" }]
                 );
                 rej("no pude encontrar la remera ", id);
-                }, 1500);
+                }, 2000);
     });
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Item({ item }, id, picture, name) {
-    return <> { id, name, picture }
-            </>
+function Item({ item }) {
+    return <ul style={{listStyleType: "none"}}>
+             { item.id, item.name }
+            </ul>
 };
 
 export default Item;
