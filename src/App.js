@@ -16,14 +16,14 @@ function App() {
   }, []); */
 
   const  handleAdd = ()=>{
-  /* if (stock > 0) {
-      let resto = stock - counter;
+  if (stock > 0) {
+    /*  let resto = stock - counter;
       setCart(counter + cart);
       setStock(resto);
-      setCounter( (initial > resto) ? resto : initial); //opcional 
+      setCounter( (initial > resto) ? resto : initial); */
     } else {
       alert('no queda stock :(');
-    } */
+    }
   }
 
   const info = {
@@ -38,9 +38,9 @@ function App() {
     <div className="App">
       <NavBar />
         <div className="info" style={info}>
+          <ItemListContainer title="FURIA PRINT" itemId={1}/>
           <ItemCount {...itemCountProps}/>
-          <h3>carrito: {cart}</h3>
-          <ItemListContainer title="FURIA PRINT"/>
+          <h3>carrito: {cart}</h3>      
       </div>
     </div>
   )
