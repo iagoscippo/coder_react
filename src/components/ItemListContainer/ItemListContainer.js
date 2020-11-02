@@ -6,7 +6,9 @@ function getItems(id) {
     return new Promise((res, rej) => {
         setTimeout (() => {
             res(
-                [{ id: 1, name: "remera 1" }, { id: 2, name: "remera 2" }, { id: 3, name: "remera 3" }]
+                [{id: 1, name: "remera1", price: "$700", pic: "Pic1"} ,
+                 {id: 2, name: "remera2", price: "$800", pic: "Pic2"},
+                 {id: 3, name: "remera3", price: "$900", pic: "Pic3"}]
                 );
                 rej("no pude encontrar la remera ", id);
                 }, 2000);
@@ -20,7 +22,7 @@ function ItemListContainer({title, itemId}) {
 
     useEffect(() => {
         // console.log('Initialized item list container');
-        getItems(itemId).then(
+        getItems().then(
             items => {
                 setList(items);
             },
