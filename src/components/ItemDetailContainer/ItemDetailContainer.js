@@ -1,22 +1,60 @@
 import React, {useState, useEffect} from 'react';
-import ItemListContainer from '../ItemListContainer';
 import ItemDetail from './ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
+import Pic1 from '../../img/remera1.jpg';
+import Pic2 from '../../img/remera2.jpg';
+import Pic3 from '../../img/remera3.jpg';
 
-/* function getItems(id) {
-    return new Promise((res, rej) => {
+function getItem(id) {
+    return new Promise((res) => {
         setTimeout (() => {
-            res(
-                [{ item.id, item.pic, item.details }].filter(
+            const item = [
+                {id: 1, name: "remera1", price: "$700", pic: Pic1, detail: 'dragon ball, goku y sheng long. impresión digital.'} ,
+                {id: 2, name: "remera2", price: "$800", pic: Pic2, detail: 'dragon ball z, trunks del futuro. impresión digital'},
+                {id: 3, name: "remera3", price: "$900", pic: Pic3, detail: 'shingeki no kyojin, titán fundador. impresión digital.'}
+                ].filter(
                     item => item.id === id
-                    )
-                );
-            rej("no existe la remera ", id);
-        }, 2000);
-    });
-}; */
+                    );
+            res(item);
+    }, 2000)}
+)};
 
 function ItemDetailContainer({items}) {
-    return <></>
+    const [item, setItem] = useState(null);
+    const { id } = useParams();
+    let available = 15;
+    let initial = 1;
+    let [stock, setStock] = useState(available);
+    // const [loading, setLoading] = useState(null);
+
+    useEffect (() => {
+        console.log('Changed to id: ', id);
+        // setLoading(true);
+        getItem(id).then(res => {
+            // setLoading(false);
+            setItem(res);
+        })
+    }, {id})
+
+    
+  const  handleAdd = ()=>{
+    if (stock > 0) {
+      /*  let resto = stock - counter;
+        setCart(counter + cart);
+        setStock(resto);
+        setCounter( (initial > resto) ? resto : initial); */
+      } else {
+        alert('no queda stock :(');
+      }
+    }
+  
+    let itemCountProps = {stock, initial, handleAdd};
+    
+    return <>
+        {item && < ItemDetail item={item} />}
+        <ItemCount {...itemCountProps}/>
+    </>;
 }
 
 

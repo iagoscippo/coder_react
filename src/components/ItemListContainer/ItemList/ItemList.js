@@ -5,13 +5,13 @@ const listStyle = {
     height: 200,
     width: 200,
     alignText:"center",
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 600,
     alignItems: 'center',
-    border:"2px solid black",
-    margin: 100,
+    margin: 0,
     padding: "auto",
     display: 'flex',
+    flexDirection:'column',
     justifyContent: 'space-around',
 }
 

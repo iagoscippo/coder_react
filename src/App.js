@@ -1,48 +1,38 @@
 import React, {useState} from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
-  let available = 15;
-  let initial = 1;
-
-  let [stock, setStock] = useState(available);
   let [cart, setCart] = useState(0);
 
-  /* useEffect(() => {
+ /* useEffect(() => {
     console.log("Initialized");
   }, []); */
 
-  const  handleAdd = ()=>{
-  if (stock > 0) {
-    /*  let resto = stock - counter;
-      setCart(counter + cart);
-      setStock(resto);
-      setCounter( (initial > resto) ? resto : initial); */
-    } else {
-      alert('no queda stock :(');
-    }
-  }
-
-  const info = {
+   const info = {
     width: '100%',
     marginTop: 50,
     textAlign: 'center'
   }
 
-  let itemCountProps = {stock, initial, handleAdd};
-
   return (
-    <div className="App">
+    <BrowserRouter>
       <NavBar />
+      <Switch>
+        <Route exact path="/">
         <div className="info" style={info}>
-          <ItemListContainer title="FURIA PRINT"/>
-          <ItemCount {...itemCountProps}/>
+          <ItemListContainer title="catálogo"/>
           <h3>carrito: {cart}</h3>      
-      </div>
-    </div>
+        </div>
+        </Route>
+        <Route exact path="/item/:id">
+          <ItemDetailContainer title="detalle" id={"id"} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
   };
 

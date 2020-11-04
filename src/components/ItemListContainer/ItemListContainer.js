@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from "./ItemList/ItemList";
-import Pic1 from './ItemList/Item/remera1.jpg';
-import Pic2 from './ItemList/Item/remera2.jpg';
-import Pic3 from './ItemList/Item/remera3.jpg';
+import Pic1 from '../../img/remera1.jpg';
+import Pic2 from '../../img/remera2.jpg';
+import Pic3 from '../../img/remera3.jpg';
 
 function getItems(id) {
     return new Promise((res, rej) => {
