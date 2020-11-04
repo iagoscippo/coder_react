@@ -17,10 +17,10 @@ function getItem(id) {
                     item => item.id === id
                     );
             res(item);
-    }, 2000)}
-)};
+    }, 2000)})
+};
 
-function ItemDetailContainer({items}) {
+function ItemDetailContainer() {
     const [item, setItem] = useState(null);
     const { id } = useParams();
     let available = 15;
@@ -33,11 +33,10 @@ function ItemDetailContainer({items}) {
         // setLoading(true);
         getItem(id).then(res => {
             // setLoading(false);
-            setItem(res);
+            setItem(res[0]);
         })
     }, {id})
 
-    
   const  handleAdd = ()=>{
     if (stock > 0) {
       /*  let resto = stock - counter;
@@ -49,13 +48,12 @@ function ItemDetailContainer({items}) {
       }
     }
   
-    let itemCountProps = {stock, initial, handleAdd};
+let itemCountProps = {stock, initial, handleAdd};
     
     return <>
         {item && < ItemDetail item={item} />}
         <ItemCount {...itemCountProps}/>
     </>;
 }
-
 
 export default ItemDetailContainer;

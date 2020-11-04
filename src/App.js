@@ -29,7 +29,7 @@ function App() {
         </div>
         </Route>
         <Route exact path="/item/:id">
-          <ItemDetailContainer title="detalle" id={"id"} />
+          <ItemDetailContainer title="detalle" />
         </Route>
       </Switch>
     </BrowserRouter>
