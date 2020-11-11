@@ -16,6 +16,7 @@ const picStyle = {
 }
 
 function Item({ item }) {
+    console.log(item);
     return <div style={itemStyle}>
              <Link exact to={"/item/:id"}>
              <img src={item.pic} alt={item.name} style={picStyle} />

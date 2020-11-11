@@ -1,7 +1,7 @@
 import React from 'react';
 
 const itemStyle = {
-    width: 300,
+    width: 700,
     height: 300,
     margin: 50,
     justifyContent: 'space-around',
@@ -14,8 +14,9 @@ const picStyle = {
     width: 200,
 }
 
-function ItemDetail({item}) {
-    return <div style={itemStyle}>
+const ItemDetail = ({item}) => {
+    console.log({item});
+    return <div style={itemStyle}> 
              <img src={item.pic} alt={item.name} style={picStyle} />
              <br />
              {item.price}

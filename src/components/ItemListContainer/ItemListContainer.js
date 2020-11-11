@@ -5,15 +5,26 @@ import Pic2 from '../../img/remera2.jpg';
 import Pic3 from '../../img/remera3.jpg';
 
 function getItems(id) {
-    return new Promise((res, rej) => {
+    return new Promise((res) => {
         setTimeout (() => {
-            res(
-                [{id: 1, name: "remera1", price: "$700", pic: Pic1} ,
-                 {id: 2, name: "remera2", price: "$800", pic: Pic2},
-                 {id: 3, name: "remera3", price: "$900", pic: Pic3}]
-                );
-                rej("no pude encontrar la remera ", id);
-                }, 2000);
+            const items = [{
+                id: 1,
+                name: "remera1",
+                price: "$700",
+                pic: Pic1
+            }, {
+                id: 2,
+                name: "remera2",
+                price: "$800",
+                pic: Pic2,
+            }, {
+                id: 3,
+                name: "remera3",
+                price: "$900",
+                pic: Pic3
+            }];
+            res(items);               
+        }, 2000);
     });
 }
 
